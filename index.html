@@ -8,7 +8,7 @@
   <meta property="og:title" content="Cloud AI Summit Teaching Kit" />
   <meta property="og:description" content="Prompts, workshop modules, build ideas, scoring rubrics, and facilitator notes for hands-on AI training in small law firms." />
   <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260609-lessons" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -21,7 +21,7 @@
     </a>
     <div class="nav-links" role="tablist" aria-label="Teaching kit sections">
       <button class="nav-tab active" data-tab="teach" role="tab" aria-selected="true">Teach</button>
-      <button class="nav-tab" data-tab="modules" role="tab" aria-selected="false">Modules</button>
+      <button class="nav-tab" data-tab="modules" role="tab" aria-selected="false">Lessons</button>
       <button class="nav-tab" data-tab="builds" role="tab" aria-selected="false">Build Ideas</button>
       <button class="nav-tab" data-tab="rubrics" role="tab" aria-selected="false">Rubrics</button>
       <button class="nav-tab" data-tab="prompts" role="tab" aria-selected="false">Prompts</button>
@@ -38,7 +38,7 @@
       <section class="hero-copy">
         <p class="eyebrow">June 25–26 · Orlando · Small law firms</p>
         <h1>Build systems. Not AI party tricks.</h1>
-        <p class="lede">A teaching site for walking lawyers and law-firm operators from “what should I automate?” to real workflows, desktop agents, and hackathon builds they can take home.</p>
+        <p class="lede">A teaching site for walking lawyers and law-firm operators from "what should I automate?" to real workflows, desktop agents, and hackathon builds they can take home.</p>
         <div class="hero-buttons">
           <button class="primary" data-tab-jump="teach">Start the walkthrough</button>
           <button class="secondary" data-tab-jump="builds">Browse build ideas</button>
@@ -80,7 +80,7 @@
           <span class="step-num">01</span>
           <h3>Reframe AI as staff capacity</h3>
           <p>Law firms do not need more software. They need reliable work to happen without a person reinventing it every time.</p>
-          <div class="speaker-note">Say: “If you would train a human on the task, you can probably train an AI workflow on the first draft of it.”</div>
+          <div class="speaker-note">Say: "If you would train a human on the task, you can probably train an AI workflow on the first draft of it."</div>
         </article>
         <article class="step-card">
           <span class="step-num">02</span>
@@ -117,53 +117,66 @@
 
     <section class="tab-panel" id="modules" role="tabpanel">
       <div class="section-head">
-        <p class="eyebrow">Workshop modules</p>
-        <h2>Three teachable chunks</h2>
-        <p>Each module stands alone. Together they move from approachable to advanced without leaving beginners behind.</p>
+        <p class="eyebrow">Teaching lessons</p>
+        <h2>Three lessons to keep in your pocket</h2>
+        <p>Use these when the room wants something concrete. Each one has a simple build path and a few notes so you do not forget the important bits while riffing.</p>
       </div>
 
-      <div class="module-grid">
-        <article class="module-card featured">
-          <div class="module-meta"><span>Day 1</span><span>20–30 min</span></div>
-          <h3>Find work worth automating</h3>
-          <p>Teach people how to identify high-value recurring work before they touch a tool.</p>
-          <h4>Use cases</h4>
-          <ul>
-            <li>Consultation prep from intake notes</li>
-            <li>Client-update email drafts</li>
-            <li>Document request checklists</li>
-            <li>Website FAQ drafts by practice area</li>
-          </ul>
-          <div class="speaker-note">Prompt the room: “What task do you explain to staff the same way every month?”</div>
-        </article>
-
-        <article class="module-card featured">
-          <div class="module-meta"><span>Day 2</span><span>60–75 min</span></div>
-          <h3>Build a digital employee</h3>
-          <p>Show a working agent-style workflow with a role, inputs, tools, review point, and test cases.</p>
-          <h4>Recommended demo</h4>
-          <p>Build a lightweight firm website or KPI dashboard from structured notes and sample data. It is visible, concrete, and less likely to die in OAuth swamp.</p>
-          <div class="speaker-note">If you do a live desktop-agent demo, narrate every instruction you give it. They need the pattern, not magic.</div>
-        </article>
-
-        <article class="module-card featured">
-          <div class="module-meta"><span>Hackathon</span><span>2 hours</span></div>
-          <h3>Build, present, judge</h3>
-          <p>Help teams choose a narrow workflow, build a rough artifact, and present it with business value and risk boundaries.</p>
-          <h4>Presentation format</h4>
+      <div class="module-grid lessons-grid">
+        <article class="module-card lesson-card featured">
+          <div class="module-meta"><span>Lesson 1</span><span>Website build</span></div>
+          <h3>Build a simple law firm website with AI coding agents</h3>
+          <p>Show the room how a plain-English idea turns into a real site: local files, GitHub, analytics, and Railway hosting. The point is not that the first draft is perfect. The point is that the loop is fast enough to think with.</p>
+          <h4>Step-by-step</h4>
           <ol>
-            <li>Problem in one sentence</li>
-            <li>Who uses it</li>
-            <li>What it produces</li>
-            <li>How a human checks it</li>
-            <li>What happens Monday</li>
+            <li>Write the brief: practice area, ideal client, pages, tone, disclaimers, and examples of sites you like.</li>
+            <li>Ask Claude Code, Codex, Hermes, OpenClaw, or another desktop agent to scaffold a static site or small app.</li>
+            <li>Vibe it into shape: headline, sections, calls to action, colors, spacing, mobile view. Make the agent revise against screenshots.</li>
+            <li>Add basic measurement: GA4, Search Console, conversion events, and UTM discipline if ads are involved.</li>
+            <li>Initialize Git, commit the first working version, and push to GitHub.</li>
+            <li>Deploy on Railway. Set any environment variables. Verify the live URL, mobile layout, forms, and analytics firing.</li>
           </ol>
+          <div class="speaker-note">Trainer notes: show files, GitHub, Railway deploy, GA4 basics, mobile check, and one bad first draft getting improved.</div>
+        </article>
+
+        <article class="module-card lesson-card featured">
+          <div class="module-meta"><span>Lesson 2</span><span>KPI dashboards</span></div>
+          <h3>Build KPI dashboards for anything</h3>
+          <p>A dashboard is a better teaching demo than a chatbot because people can see whether it worked. Use Clio if you want a legal example, but the pattern works for intake, ads, cases, billing, staff workload, or owner metrics.</p>
+          <h4>Step-by-step</h4>
+          <ol>
+            <li>Pick the question first: "What do I need to know every Monday morning?"</li>
+            <li>List the data sources: Clio, Airtable, CSV exports, Google Sheets, GA4, ad platforms, or a practice-management API.</li>
+            <li>Authenticate carefully. Start with read-only keys or OAuth. Keep secrets in environment variables, never in the code.</li>
+            <li>Have the agent build a local dashboard with sample data before touching live data.</li>
+            <li>Connect the real data source and add guardrails: date windows, missing fields, stale data warnings, and clear definitions.</li>
+            <li>Run it locally, then choose the access model: Railway for a hosted app, Tailscale for private internal access, or local-only for sensitive dashboards.</li>
+            <li>Ask for one narrative box: "what changed, why it matters, what to do next." Raw charts are where attention goes to die.</li>
+          </ol>
+          <div class="speaker-note">Trainer notes: start with the business question, use fake data first, show auth/env vars, explain Railway vs Tailscale, include a narrative summary.</div>
+        </article>
+
+        <article class="module-card lesson-card featured">
+          <div class="module-meta"><span>Lesson 3</span><span>Digital employees</span></div>
+          <h3>Build a digital employee with desktop agents</h3>
+          <p>This is where the summit gets interesting. A digital employee is a repeatable workflow with tools, skills, scheduling, and a human review point. The magic is not the model. It is the wiring.</p>
+          <h4>Step-by-step</h4>
+          <ol>
+            <li>Name the job like you would for a person: inbox triage assistant, filing deadline watcher, records collection clerk, marketing analyst.</li>
+            <li>Define the connectors and tools: email, calendar, Drive, case management, spreadsheets, browser, GitHub, deployment, or internal scripts.</li>
+            <li>Write the skill: what good work looks like, what to avoid, examples, checklists, and escalation rules.</li>
+            <li>Add a scheduled task when the job should happen without you asking: daily triage, weekly audit, monthly cleanup, deadline watch.</li>
+            <li>Give it safe powers first: read, summarize, draft, and report. Add write actions only after trust is earned.</li>
+            <li>Test with fake or impossible data. If the agent cannot handle bad input gracefully, it is not ready for real clients.</li>
+            <li>Scale by teaching the team how to supervise agents. Bigger orgs may need managed agents, locked-down environments, approval queues, and tools like Claude Cowork or similar secure workspaces.</li>
+          </ol>
+          <div class="speaker-note">Trainer notes: connectors + skills + cron. Read-only first. Human review. Team sophistication matters more than fancy prompts.</div>
         </article>
       </div>
 
       <div class="callout">
-        <h3>The key distinction</h3>
-        <p><strong>Chatbot:</strong> answer a question. <strong>Workflow:</strong> produce a known output from known inputs. <strong>Digital employee:</strong> repeat a workflow with tools, memory, boundaries, and review.</p>
+        <h3>The useful distinction</h3>
+        <p><strong>Website:</strong> make an idea visible. <strong>Dashboard:</strong> make the business legible. <strong>Digital employee:</strong> make a repeatable job happen on purpose, with tools and review.</p>
       </div>
     </section>
 
@@ -202,7 +215,7 @@
         <article class="idea-card" data-tags="personal injury pi medical records collection records requests providers bills">
           <span class="pill">PI</span>
           <h3>Medical record collection agent</h3>
-          <p>Track providers, request status, missing bills, authorizations, and follow-up dates so the record chase stops living in someone’s head.</p>
+          <p>Track providers, request status, missing bills, authorizations, and follow-up dates so the record chase stops living in someone's head.</p>
           <ul><li>Inputs: intake notes, provider list, treatment dates, request log</li><li>Output: records matrix + next follow-ups</li><li>Human check: paralegal confirms provider/status accuracy</li></ul>
         </article>
         <article class="idea-card" data-tags="personal injury pi chronology medical timeline treatment records injuries damages">
@@ -214,7 +227,7 @@
         <article class="idea-card" data-tags="personal injury pi demand letter medical chronology damages settlement writing">
           <span class="pill">PI</span>
           <h3>Demand letter writer agent</h3>
-          <p>Draft a demand package from liability facts, medical chronology, bills, damages notes, and the firm’s demand-writing style guide.</p>
+          <p>Draft a demand package from liability facts, medical chronology, bills, damages notes, and the firm's demand-writing style guide.</p>
           <ul><li>Inputs: liability summary, chronology, specials, photos, demand-writing rules</li><li>Output: structured demand draft + exhibit checklist</li><li>Human check: attorney reviews liability, causation, damages, and tone</li></ul>
         </article>
         <article class="idea-card" data-tags="immigration documents organizer checklist">
@@ -244,7 +257,7 @@
         <article class="idea-card" data-tags="all practice areas pipeline phase auditor case audit cron status blockers next actions">
           <span class="pill">All Practice Areas</span>
           <h3>Pipeline phase auditor agent</h3>
-          <p>Audit matters by phase, find blockers, compare required milestones to actual status, and generate a concise “weird items + next actions” report.</p>
+          <p>Audit matters by phase, find blockers, compare required milestones to actual status, and generate a concise "weird items + next actions" report.</p>
           <ul><li>Inputs: case-management export, phase rules, tasks, calendar/deadline data</li><li>Output: blocked matters, missing steps, owner-specific next actions</li><li>Human check: team lead confirms recommendations before changes are made</li></ul>
         </article>
         <article class="idea-card" data-tags="consultation screening intake calendar fit conflict bad fit probate sales">
@@ -382,7 +395,7 @@ Include:
 
 Rules:
 - Do not invent dates, filings, or legal conclusions.
-- If information is missing, list it under “Need to confirm.”
+- If information is missing, list it under "Need to confirm."
 - Keep the tone calm, practical, and brief.
 - End with the next action requested from the client, if any.
 
@@ -491,7 +504,7 @@ Use this structure:
             <li>The workflow needs judgment but has no reviewer.</li>
             <li>The output goes directly to a client.</li>
             <li>The tool can access old files nobody has permission-audited.</li>
-            <li>The prompt says “be accurate” but provides no source material.</li>
+            <li>The prompt says "be accurate" but provides no source material.</li>
             <li>Nobody owns maintaining it.</li>
           </ul>
         </article>
@@ -510,7 +523,7 @@ Use this structure:
 
       <div class="footer-note">
         <h3>Core takeaway</h3>
-        <p>Do not ask, “How do we use AI?” Ask, “What work should happen the same good way every time?” Then build the smallest system that makes that work easier to repeat.</p>
+        <p>Do not ask, "How do we use AI?" Ask, "What work should happen the same good way every time?" Then build the smallest system that makes that work easier to repeat.</p>
       </div>
     </section>
   </main>

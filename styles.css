@@ -314,7 +314,12 @@ li + li { margin-top: 7px; }
 .mini-diagram b { color: var(--green); }
 
 .module-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.lessons-grid { grid-template-columns: 1fr; }
+.lesson-card { padding: clamp(22px, 3vw, 34px); }
+.lesson-card ol { columns: 2; column-gap: 34px; }
+.lesson-card li { break-inside: avoid; }
 .module-card { padding: 24px; }
+.module-card.lesson-card { padding: clamp(22px, 3vw, 34px); }
 .module-card.featured { background: linear-gradient(160deg, rgba(24,34,49,.92), rgba(17,24,36,.72)); }
 .module-meta { display: flex; gap: 8px; margin-bottom: 16px; }
 .module-meta span, .pill { display: inline-flex; color: #07110d; background: var(--green); padding: 7px 9px; border-radius: 999px; font: 900 10px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; }
@@ -393,6 +398,7 @@ li + li { margin-top: 7px; }
   .brand { flex: 1; }
   .nav-links { order: 3; width: 100%; }
   .hero-grid, .module-grid, .idea-grid, .rubric-grid, .takehome-layout { grid-template-columns: 1fr; }
+  .lesson-card ol { columns: 1; }
   .command-card { transform: none; }
   .stats-strip { grid-template-columns: repeat(2, 1fr); }
   .section-head.with-tools { display: grid; }
