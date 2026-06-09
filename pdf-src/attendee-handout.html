@@ -45,36 +45,23 @@
 <div class="card"><h3>Local file cleanup agent</h3><p>Propose safe organization for messy Desktop/Downloads folders.</p></div>
 </div>
 
-<h2>Prompts</h2>
-<h3>Workflow finder</h3><div class="prompt">You are helping a small law firm identify practical AI workflows.
+<h2>Starter prompts</h2>
+<h3>Connector builder</h3><div class="prompt">Build a read-only connector to [SYSTEM]. Identify the auth method, minimum scopes, environment variables, one safe test fetch, error handling, and what to test before adding write permissions.</div>
 
-Ask me up to 8 questions about recurring work in my firm. Then return:
-1. The top 5 automation candidates.
-2. For each: trigger, inputs, output, reviewer, risk level, and first test.
-3. One recommendation for the workflow I should build first.
+<h3>KPI dashboard starter</h3><div class="prompt">Build a local KPI dashboard from [APP/API/CSV]. Start with fake data, keep metric definitions visible, flag stale data, add a narrative summary, and give deployment options: Railway, Tailscale, or local-only.</div>
 
-Prefer boring, high-frequency work over impressive demos.</div>
+<h3>Skill authoring starter</h3><div class="prompt">Create a SKILL.md for [WORKFLOW]. Include when to use it, required inputs, workflow steps, output format, safety rules, common mistakes, and verification checklist.</div>
 
-<h3>Digital employee job description</h3><div class="prompt">Create a job description for an AI workflow that handles this recurring task:
-[TASK]
+<h3>Scheduled agent starter</h3><div class="prompt">Turn [WORKFLOW] into a scheduled agent. Define data collection, tool access, forbidden powers, deduping, report format, silent no-op behavior, and human approval points.</div>
 
-Include mission, inputs, tools it may use, tools it may not use, output format, quality checklist, escalation rules, human review step, and test cases.</div>
-
-<h3>PI demand package builder</h3><div class="prompt">You are helping draft a personal-injury demand package from source materials.
-
-Use only the facts provided. Do not invent treatment, diagnoses, causation, bills, policy limits, or permanency.
-
-Inputs: liability summary, medical chronology, medical bills/specials, client impact notes, photos/exhibits, and firm demand-writing style rules.
-
-Return: missing information checklist, chronology issues needing human review, demand outline, draft demand letter, exhibit checklist, and risk notes.</div>
-
-<h3>Pipeline phase auditor</h3><div class="prompt">You are auditing active matters by pipeline phase.
-
-Use phase rules and matter data. Do not change records or invent facts.
-
-For each matter, identify current phase, required milestones, completed milestones, missing/stale items, blockers, deadline/calendar risk, recommended next action, and owner.
-
-Output only: matters needing attention, weird items, clear next actions, and questions a human must answer.</div>
+<h2>Example skills</h2>
+<div class="grid">
+<div class="card"><h3>Intake completeness audit</h3><p>Checks parties, documents, assets, notes, and client follow-up needs.</p></div>
+<div class="card"><h3>Court hearing prep auditor</h3><p>Checks upcoming hearings against filings, exhibits, notices, prep tasks, and owner assignments.</p></div>
+<div class="card"><h3>Medical chronology builder</h3><p>Turns PI medical records into a dated treatment timeline with gaps and source notes.</p></div>
+<div class="card"><h3>PI demand package drafter</h3><p>Drafts a demand package from liability, chronology, bills, photos, and client impact notes.</p></div>
+<div class="card"><h3>Weekly marketing brief</h3><p>Turns ads, analytics, search, and lead-quality data into a short owner briefing.</p></div>
+</div>
 
 <h2>Red flags / green flags</h2>
 <div class="grid">
