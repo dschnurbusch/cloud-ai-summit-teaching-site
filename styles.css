@@ -79,7 +79,7 @@ button { cursor: pointer; }
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 70;
+  z-index: 1000;
   width: min(1180px, calc(100% - 28px));
   display: flex;
   align-items: center;
