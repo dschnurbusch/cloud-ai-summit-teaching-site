@@ -399,8 +399,39 @@ li + li { margin-top: 7px; }
 }
 
 @media (max-width: 560px) {
-  .hero { padding-top: 154px; }
-  h1 { font-size: 54px; }
+  .topbar {
+    top: 10px;
+    width: calc(100% - 20px);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-radius: 22px;
+  }
+  .brand span:not(.brand-mark) { display: none; }
+  .brand { padding-right: 0; }
+  .nav-actions { display: none; }
+  .ghost { font-size: 10px; padding: 9px 10px; }
+  .nav-links {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding-bottom: 2px;
+    scroll-snap-type: x proximity;
+  }
+  .nav-tab { scroll-snap-align: start; padding: 10px 12px; }
+  .hero { padding: 144px 20px 42px; }
+  h1 {
+    font-size: clamp(42px, 13.6vw, 50px);
+    line-height: .93;
+    letter-spacing: -.055em;
+    overflow-wrap: anywhere;
+  }
+  .lede { font-size: 18px; line-height: 1.35; }
+  .hero-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .primary, .secondary { width: 100%; min-height: 54px; }
+  .command-card pre { font-size: 12px; padding: 20px; }
   .stats-strip { grid-template-columns: 1fr; }
   .step-card { grid-template-columns: 1fr; }
   .step-num { grid-row: auto; }
