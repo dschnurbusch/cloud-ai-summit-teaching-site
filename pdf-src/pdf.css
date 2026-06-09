@@ -1,0 +1,20 @@
+@page { size: Letter; margin: 0.55in; }
+:root { --ink:#1f2933; --muted:#52616f; --accent:#0b6b4f; --amber:#9a6500; --line:#d8ded6; --soft:#f5f1e8; }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); font: 11.5pt/1.45 Avenir Next, Helvetica, Arial, sans-serif; }
+h1, h2, h3 { margin: 0; line-height: 1.05; }
+h1 { font-family: Georgia, serif; font-size: 34pt; letter-spacing: -1.6pt; margin-bottom: 10pt; }
+h2 { font-family: Georgia, serif; font-size: 21pt; margin-top: 22pt; border-top: 1pt solid var(--line); padding-top: 14pt; }
+h3 { font-size: 13pt; margin-top: 12pt; }
+p { margin: 6pt 0; color: var(--muted); }
+ul, ol { margin: 6pt 0 10pt 18pt; padding: 0; }
+li { margin: 3pt 0; }
+.cover { min-height: 8.7in; display: grid; align-content: center; border: 2pt solid var(--ink); padding: 34pt; background: linear-gradient(135deg, #fff, var(--soft)); }
+.eyebrow { color: var(--accent); font-weight: 800; letter-spacing: 1.2pt; text-transform: uppercase; font-size: 8.5pt; }
+.card { border: 1pt solid var(--line); border-radius: 10pt; padding: 12pt; margin: 10pt 0; break-inside: avoid; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; }
+.score { display: inline-block; color: white; background: var(--accent); border-radius: 99pt; padding: 3pt 7pt; font-weight: 800; font-size: 9pt; }
+.prompt { white-space: pre-wrap; font: 9.2pt/1.4 Menlo, Consolas, monospace; background: #f7f7f3; border: 1pt solid var(--line); padding: 10pt; border-radius: 8pt; color: #24313f; }
+.note { border-left: 4pt solid var(--amber); padding-left: 10pt; color: #4b3820; background: #fff8e6; padding-top: 6pt; padding-bottom: 6pt; }
+.page-break { page-break-before: always; }
+.footer { margin-top: 20pt; color: var(--muted); font-size: 9pt; }

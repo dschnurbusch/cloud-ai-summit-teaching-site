@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud AI Summit Teaching Kit | Dan Schnurbusch</title>
+  <meta name="description" content="A facilitator deck and take-home resource for teaching small law firms how to build practical AI workflows, agents, and digital employees." />
+  <meta property="og:title" content="Cloud AI Summit Teaching Kit" />
+  <meta property="og:description" content="Prompts, workshop modules, build ideas, scoring rubrics, and facilitator notes for hands-on AI training in small law firms." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="hero" id="top">
+    <nav class="topbar" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Cloud AI Summit Teaching Kit home">
+        <span class="brand-mark">DS</span>
+        <span>Cloud AI Summit Kit</span>
+      </a>
+      <div class="nav-links" role="tablist" aria-label="Teaching kit sections">
+        <button class="nav-tab active" data-tab="teach" role="tab" aria-selected="true">Teach</button>
+        <button class="nav-tab" data-tab="modules" role="tab" aria-selected="false">Modules</button>
+        <button class="nav-tab" data-tab="builds" role="tab" aria-selected="false">Build Ideas</button>
+        <button class="nav-tab" data-tab="rubrics" role="tab" aria-selected="false">Rubrics</button>
+        <button class="nav-tab" data-tab="prompts" role="tab" aria-selected="false">Prompts</button>
+        <button class="nav-tab" data-tab="takehome" role="tab" aria-selected="false">Take-home</button>
+      </div>
+      <div class="nav-actions">
+        <button class="ghost" id="trainerToggle" type="button">Trainer notes</button>
+        <button class="ghost" id="printBtn" type="button">Print</button>
+      </div>
+    </nav>
+
+    <div class="hero-grid">
+      <section class="hero-copy">
+        <p class="eyebrow">June 25–26 · Orlando · Small law firms</p>
+        <h1>Build systems. Not AI party tricks.</h1>
+        <p class="lede">A teaching site for walking lawyers and law-firm operators from “what should I automate?” to real workflows, desktop agents, and hackathon builds they can take home.</p>
+        <div class="hero-buttons">
+          <button class="primary" data-tab-jump="teach">Start the walkthrough</button>
+          <button class="secondary" data-tab-jump="builds">Browse build ideas</button>
+          <a class="secondary link-button" href="downloads/cloud-ai-summit-facilitator-guide.pdf" download>Download facilitator PDF</a>
+          <a class="secondary link-button" href="downloads/cloud-ai-summit-attendee-handout.pdf" download>Download attendee PDF</a>
+        </div>
+      </section>
+
+      <aside class="command-card" aria-label="Core teaching prompt">
+        <div class="chrome"><span></span><span></span><span></span><strong>facilitator.prompt</strong></div>
+        <pre><code>Goal: leave with one useful workflow.
+
+1. Find repeatable work.
+2. Define the output.
+3. Give the agent tools and boundaries.
+4. Test on fake/impossible data.
+5. Decide who owns it Monday morning.</code></pre>
+      </aside>
+    </div>
+
+    <div class="stats-strip" aria-label="Audience snapshot">
+      <div><strong>33</strong><span>known attendees</span></div>
+      <div><strong>18</strong><span>estate/probate</span></div>
+      <div><strong>2 days</strong><span>hands-on builds</span></div>
+      <div><strong>1 rule</strong><span>show the work</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="tab-panel active" id="teach" role="tabpanel">
+      <div class="section-head">
+        <p class="eyebrow">Facilitator path</p>
+        <h2>The walkthrough</h2>
+        <p>Use this as your spine. It works as a talk track, a workshop script, and a way to reset the room when demos get noisy.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="step-card">
+          <span class="step-num">01</span>
+          <h3>Reframe AI as staff capacity</h3>
+          <p>Law firms do not need more software. They need reliable work to happen without a person reinventing it every time.</p>
+          <div class="speaker-note">Say: “If you would train a human on the task, you can probably train an AI workflow on the first draft of it.”</div>
+        </article>
+        <article class="step-card">
+          <span class="step-num">02</span>
+          <h3>Find the recurring work</h3>
+          <p>Look for tasks with a trigger, repeatable inputs, a predictable output, and a clear reviewer.</p>
+          <ul>
+            <li>Every new consultation gets reviewed.</li>
+            <li>Every probate matter needs document chasing.</li>
+            <li>Every lead needs the same first questions answered.</li>
+          </ul>
+          <div class="speaker-note">Use estate/probate examples first. Half the room will immediately understand the pain.</div>
+        </article>
+        <article class="step-card">
+          <span class="step-num">03</span>
+          <h3>Separate prompt, data, tools, and judgment</h3>
+          <p>A useful AI system is not one mega-prompt. It is a small job description plus source material, allowed tools, constraints, and a human approval point.</p>
+          <div class="mini-diagram">
+            <span>Trigger</span><b>→</b><span>Context</span><b>→</b><span>Agent</span><b>→</b><span>Draft</span><b>→</b><span>Human review</span>
+          </div>
+        </article>
+        <article class="step-card">
+          <span class="step-num">04</span>
+          <h3>Demo a build, not a miracle</h3>
+          <p>Show the boring parts: files, prompts, failed output, revision, test data, and the final artifact. That is where trust comes from.</p>
+          <div class="speaker-note">Do not hide the scaffolding. Lawyers trust the method more when they see the seams.</div>
+        </article>
+        <article class="step-card">
+          <span class="step-num">05</span>
+          <h3>Make Monday real</h3>
+          <p>Every attendee should leave with one owner, one workflow, one risk boundary, and one 30-minute block to test it back at the office.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="modules" role="tabpanel">
+      <div class="section-head">
+        <p class="eyebrow">Workshop modules</p>
+        <h2>Three teachable chunks</h2>
+        <p>Each module stands alone. Together they move from approachable to advanced without leaving beginners behind.</p>
+      </div>
+
+      <div class="module-grid">
+        <article class="module-card featured">
+          <div class="module-meta"><span>Day 1</span><span>20–30 min</span></div>
+          <h3>Find work worth automating</h3>
+          <p>Teach people how to identify high-value recurring work before they touch a tool.</p>
+          <h4>Use cases</h4>
+          <ul>
+            <li>Consultation prep from intake notes</li>
+            <li>Client-update email drafts</li>
+            <li>Document request checklists</li>
+            <li>Website FAQ drafts by practice area</li>
+          </ul>
+          <div class="speaker-note">Prompt the room: “What task do you explain to staff the same way every month?”</div>
+        </article>
+
+        <article class="module-card featured">
+          <div class="module-meta"><span>Day 2</span><span>60–75 min</span></div>
+          <h3>Build a digital employee</h3>
+          <p>Show a working agent-style workflow with a role, inputs, tools, review point, and test cases.</p>
+          <h4>Recommended demo</h4>
+          <p>Build a lightweight firm website or KPI dashboard from structured notes and sample data. It is visible, concrete, and less likely to die in OAuth swamp.</p>
+          <div class="speaker-note">If you do a live desktop-agent demo, narrate every instruction you give it. They need the pattern, not magic.</div>
+        </article>
+
+        <article class="module-card featured">
+          <div class="module-meta"><span>Hackathon</span><span>2 hours</span></div>
+          <h3>Build, present, judge</h3>
+          <p>Help teams choose a narrow workflow, build a rough artifact, and present it with business value and risk boundaries.</p>
+          <h4>Presentation format</h4>
+          <ol>
+            <li>Problem in one sentence</li>
+            <li>Who uses it</li>
+            <li>What it produces</li>
+            <li>How a human checks it</li>
+            <li>What happens Monday</li>
+          </ol>
+        </article>
+      </div>
+
+      <div class="callout">
+        <h3>The key distinction</h3>
+        <p><strong>Chatbot:</strong> answer a question. <strong>Workflow:</strong> produce a known output from known inputs. <strong>Digital employee:</strong> repeat a workflow with tools, memory, boundaries, and review.</p>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="builds" role="tabpanel">
+      <div class="section-head with-tools">
+        <div>
+          <p class="eyebrow">Hackathon kit</p>
+          <h2>Build ideas</h2>
+          <p>Pick narrow. Build ugly. Prove value. Polish later.</p>
+        </div>
+        <label class="search-box">
+          <span>Filter ideas</span>
+          <input id="ideaSearch" type="search" placeholder="estate, intake, dashboard…" />
+        </label>
+      </div>
+
+      <div class="idea-grid" id="ideaGrid">
+        <article class="idea-card" data-tags="estate probate intake checklist client documents">
+          <span class="pill">Estate / Probate</span>
+          <h3>Probate intake checklist generator</h3>
+          <p>Turn intake notes into missing documents, likely next steps, and client questions.</p>
+          <ul><li>Inputs: intake form, death certificate notes, asset list</li><li>Output: checklist + follow-up email draft</li><li>Human check: attorney reviews legal path</li></ul>
+        </article>
+        <article class="idea-card" data-tags="estate probate client update email">
+          <span class="pill">Estate / Probate</span>
+          <h3>Client update email drafter</h3>
+          <p>Summarize matter status into a plain-English update with next actions.</p>
+          <ul><li>Inputs: case notes, task list, recent filings</li><li>Output: short email draft</li><li>Human check: accuracy and tone</li></ul>
+        </article>
+        <article class="idea-card" data-tags="family consultation prep questions">
+          <span class="pill">Family</span>
+          <h3>Consultation prep brief</h3>
+          <p>Create a pre-call brief from intake answers and flag missing facts.</p>
+          <ul><li>Inputs: intake form</li><li>Output: lawyer prep sheet</li><li>Human check: conflict/risk screen</li></ul>
+        </article>
+        <article class="idea-card" data-tags="personal injury pi dashboard kpi leads">
+          <span class="pill">PI</span>
+          <h3>PI lead triage dashboard</h3>
+          <p>Rank new leads by urgency, injury facts, limitations risk, and missing evidence.</p>
+          <ul><li>Inputs: lead spreadsheet</li><li>Output: dashboard + priority queue</li><li>Human check: intake manager confirms</li></ul>
+        </article>
+        <article class="idea-card" data-tags="immigration documents organizer checklist">
+          <span class="pill">Immigration</span>
+          <h3>Client document organizer</h3>
+          <p>Convert a document dump into categories, missing items, and a client-facing request list.</p>
+          <ul><li>Inputs: filenames or folder inventory</li><li>Output: document map</li><li>Human check: legal sufficiency</li></ul>
+        </article>
+        <article class="idea-card" data-tags="business employment sop internal policy">
+          <span class="pill">Business / Employment</span>
+          <h3>SOP bot for recurring advice</h3>
+          <p>Turn internal playbooks into a staff-facing assistant for routine process questions.</p>
+          <ul><li>Inputs: SOP docs</li><li>Output: answer + source citation</li><li>Human check: no legal advice to clients</li></ul>
+        </article>
+        <article class="idea-card" data-tags="marketing website landing page seo faq">
+          <span class="pill">Marketing</span>
+          <h3>Practice-area landing page builder</h3>
+          <p>Generate a draft page from a target client, service, FAQs, and local market.</p>
+          <ul><li>Inputs: service notes, examples, audience</li><li>Output: page draft or static site</li><li>Human check: legal claims and ethics</li></ul>
+        </article>
+        <article class="idea-card" data-tags="operations kpi dashboard metrics weekly">
+          <span class="pill">Operations</span>
+          <h3>Weekly KPI narrator</h3>
+          <p>Turn spreadsheet metrics into a short owner briefing: what changed, why it matters, what to do.</p>
+          <ul><li>Inputs: CSV or sheet export</li><li>Output: dashboard + narrative</li><li>Human check: data definitions</li></ul>
+        </article>
+        <article class="idea-card" data-tags="reception intake phone script">
+          <span class="pill">Intake</span>
+          <h3>Reception call coach</h3>
+          <p>Create scripts and follow-up questions based on practice area and lead source.</p>
+          <ul><li>Inputs: call type, practice area, ideal client rules</li><li>Output: script + disqualifiers</li><li>Human check: compliance and tone</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="rubrics" role="tabpanel">
+      <div class="section-head">
+        <p class="eyebrow">Judging framework</p>
+        <h2>Hackathon scoring rubric</h2>
+        <p>Score the system, not the flash. A boring workflow that saves three hours a week beats a shiny chatbot nobody will trust.</p>
+      </div>
+
+      <div class="rubric-grid">
+        <article class="score-card"><span>25 pts</span><h3>Business value</h3><p>Does this solve a real, frequent, painful problem in the firm?</p></article>
+        <article class="score-card"><span>20 pts</span><h3>Workflow clarity</h3><p>Are the trigger, inputs, output, owner, and review step obvious?</p></article>
+        <article class="score-card"><span>20 pts</span><h3>Usability</h3><p>Could a normal staff member run this without the builder standing nearby?</p></article>
+        <article class="score-card"><span>15 pts</span><h3>Risk control</h3><p>Does it avoid client-confidentiality, hallucination, unauthorized-practice, and data-permission traps?</p></article>
+        <article class="score-card"><span>10 pts</span><h3>Evidence of testing</h3><p>Did the team try edge cases, fake contacts, missing fields, or bad inputs?</p></article>
+        <article class="score-card"><span>10 pts</span><h3>Monday readiness</h3><p>Is there a credible next step for using or improving it after the summit?</p></article>
+      </div>
+
+      <div class="judge-sheet">
+        <h3>Fast judging questions</h3>
+        <ol>
+          <li>What job does this replace, support, or accelerate?</li>
+          <li>What information does it need to do that job?</li>
+          <li>What output does it produce?</li>
+          <li>Where can it be wrong?</li>
+          <li>Who reviews it?</li>
+          <li>What would make this safe enough to try next week?</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="prompts" role="tabpanel">
+      <div class="section-head">
+        <p class="eyebrow">Copy/paste prompts</p>
+        <h2>Prompts that teach the pattern</h2>
+        <p>These are intentionally structured. They teach attendees to define the job before asking for output.</p>
+      </div>
+
+      <div class="prompt-list">
+        <article class="prompt-card">
+          <div class="prompt-head"><h3>Workflow finder</h3><button class="copy" data-copy="workflowFinder">Copy</button></div>
+          <pre id="workflowFinder"><code>You are helping a small law firm identify practical AI workflows.
+
+Ask me up to 8 questions about recurring work in my firm. Then return:
+1. The top 5 automation candidates.
+2. For each: trigger, inputs, output, reviewer, risk level, and first test.
+3. One recommendation for the workflow I should build first.
+
+Prefer boring, high-frequency work over impressive demos.</code></pre>
+        </article>
+
+        <article class="prompt-card">
+          <div class="prompt-head"><h3>Digital employee job description</h3><button class="copy" data-copy="jobDescription">Copy</button></div>
+          <pre id="jobDescription"><code>Create a job description for an AI workflow that handles this recurring task:
+[TASK]
+
+Include:
+- Mission
+- Inputs it needs
+- Tools it may use
+- Tools it may not use
+- Output format
+- Quality checklist
+- Escalation rules
+- Human review step
+- Test cases, including bad or incomplete inputs</code></pre>
+        </article>
+
+        <article class="prompt-card">
+          <div class="prompt-head"><h3>Matter/status email draft</h3><button class="copy" data-copy="statusEmail">Copy</button></div>
+          <pre id="statusEmail"><code>Using only the facts below, draft a plain-English client update email.
+
+Rules:
+- Do not invent dates, filings, or legal conclusions.
+- If information is missing, list it under “Need to confirm.”
+- Keep the tone calm, practical, and brief.
+- End with the next action requested from the client, if any.
+
+Facts:
+[PASTE FACTS]</code></pre>
+        </article>
+
+        <article class="prompt-card">
+          <div class="prompt-head"><h3>Hackathon presentation builder</h3><button class="copy" data-copy="presentationBuilder">Copy</button></div>
+          <pre id="presentationBuilder"><code>Help me prepare a 3-minute hackathon presentation for the workflow we built.
+
+Use this structure:
+1. Problem: one sentence.
+2. User: who uses this in the firm.
+3. Before: how the work happens now.
+4. After: what our workflow produces.
+5. Demo path: the 3 screens or outputs to show.
+6. Risk boundary: what a human must review.
+7. Monday step: what we would do next week.</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="takehome" role="tabpanel">
+      <div class="section-head">
+        <p class="eyebrow">Take-home resource</p>
+        <h2>What to do after the summit</h2>
+        <p>This is the page attendees should revisit when the conference glow wears off and the inbox returns, because the inbox is undefeated.</p>
+        <div class="download-row" aria-label="Downloadable PDFs">
+          <a href="downloads/cloud-ai-summit-attendee-handout.pdf" download>Download attendee handout PDF</a>
+          <a href="downloads/cloud-ai-summit-facilitator-guide.pdf" download>Download facilitator guide PDF</a>
+          <a href="downloads/cloud-ai-summit-rubric.pdf" download>Download rubric PDF</a>
+        </div>
+      </div>
+
+      <div class="takehome-layout">
+        <article class="checklist-card">
+          <h3>The 30-minute Monday test</h3>
+          <ol class="checklist">
+            <li>Pick one workflow from the summit.</li>
+            <li>Gather three real examples and one fake/impossible example.</li>
+            <li>Write the job description before opening the tool.</li>
+            <li>Run the workflow on the fake example first.</li>
+            <li>Run it on a real example, but do not send/use the output yet.</li>
+            <li>Mark every correction a human had to make.</li>
+            <li>Decide: keep testing, narrow scope, or abandon.</li>
+          </ol>
+        </article>
+
+        <article class="risk-card">
+          <h3>Red flags</h3>
+          <ul>
+            <li>The workflow needs judgment but has no reviewer.</li>
+            <li>The output goes directly to a client.</li>
+            <li>The tool can access old files nobody has permission-audited.</li>
+            <li>The prompt says “be accurate” but provides no source material.</li>
+            <li>Nobody owns maintaining it.</li>
+          </ul>
+        </article>
+
+        <article class="risk-card green">
+          <h3>Green flags</h3>
+          <ul>
+            <li>The task happens every week.</li>
+            <li>The output is a draft, checklist, summary, or dashboard.</li>
+            <li>There is a clear human reviewer.</li>
+            <li>The firm can test it with non-client or fake data first.</li>
+            <li>Success is measurable in time saved or errors avoided.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="footer-note">
+        <h3>Core takeaway</h3>
+        <p>Do not ask, “How do we use AI?” Ask, “What work should happen the same good way every time?” Then build the smallest system that makes that work easier to repeat.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Created for The Cloud AI Summit · Dan Schnurbusch · Legal Tech Collective</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
+  <script src="script.js"></script>
+</body>
+</html>

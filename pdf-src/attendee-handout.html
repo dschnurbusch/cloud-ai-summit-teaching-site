@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Cloud AI Summit Attendee Handout</title><link rel="stylesheet" href="pdf.css"></head><body>
+<section class="cover">
+<p class="eyebrow">Cloud AI Summit · Attendee Handout</p>
+<h1>Your first useful AI workflow</h1>
+<p>A take-home guide for finding recurring legal work, designing a safe workflow, and testing it without turning your firm into a science fair.</p>
+<p class="footer">June 25–26, 2026 · Orlando, FL</p>
+</section>
+
+<h2>The 5-part workflow test</h2>
+<div class="card"><h3>1. Trigger</h3><p>When should the workflow start? Example: new consultation scheduled, client uploads documents, weekly metrics updated.</p></div>
+<div class="card"><h3>2. Inputs</h3><p>What facts or files does it need? If the answer is “everything in our firm,” narrow it.</p></div>
+<div class="card"><h3>3. Output</h3><p>What should it produce? Checklist, draft email, summary, dashboard, table, or set of next actions.</p></div>
+<div class="card"><h3>4. Reviewer</h3><p>Who checks the output before anyone relies on it?</p></div>
+<div class="card"><h3>5. First test</h3><p>What fake or impossible example can you use to see how it fails?</p></div>
+
+<h2>30-minute Monday test</h2>
+<ol><li>Pick one workflow from the summit.</li><li>Gather three real examples and one fake/impossible example.</li><li>Write the job description before opening the tool.</li><li>Run the workflow on the fake example first.</li><li>Run it on one real example, but do not send/use the output yet.</li><li>Mark every correction a human had to make.</li><li>Decide: keep testing, narrow scope, or abandon.</li></ol>
+
+<h2>Build ideas</h2>
+<div class="grid">
+<div class="card"><h3>Probate intake checklist</h3><p>Turn intake notes into missing documents, likely next steps, and client questions.</p></div>
+<div class="card"><h3>Client update email</h3><p>Summarize matter status into a plain-English update with next actions.</p></div>
+<div class="card"><h3>Consultation prep brief</h3><p>Create a pre-call brief from intake answers and flag missing facts.</p></div>
+<div class="card"><h3>Lead triage dashboard</h3><p>Rank leads by urgency, fit, missing facts, and next action.</p></div>
+<div class="card"><h3>Document organizer</h3><p>Convert a folder inventory into categories and missing-item requests.</p></div>
+<div class="card"><h3>Weekly KPI narrator</h3><p>Turn metrics into a short briefing: what changed, why it matters, and what to do.</p></div>
+</div>
+
+<h2>Prompts</h2>
+<h3>Workflow finder</h3><div class="prompt">You are helping a small law firm identify practical AI workflows.
+
+Ask me up to 8 questions about recurring work in my firm. Then return:
+1. The top 5 automation candidates.
+2. For each: trigger, inputs, output, reviewer, risk level, and first test.
+3. One recommendation for the workflow I should build first.
+
+Prefer boring, high-frequency work over impressive demos.</div>
+
+<h3>Digital employee job description</h3><div class="prompt">Create a job description for an AI workflow that handles this recurring task:
+[TASK]
+
+Include mission, inputs, tools it may use, tools it may not use, output format, quality checklist, escalation rules, human review step, and test cases.</div>
+
+<h2>Red flags / green flags</h2>
+<div class="grid">
+<div class="card"><h3>Red flags</h3><ul><li>No reviewer</li><li>Output goes directly to client</li><li>Old files with unaudited permissions</li><li>No source material</li><li>No owner</li></ul></div>
+<div class="card"><h3>Green flags</h3><ul><li>Task happens weekly</li><li>Output is a draft/checklist/summary</li><li>Clear reviewer</li><li>Can test with fake data</li><li>Success is measurable</li></ul></div>
+</div>
+</body></html>
