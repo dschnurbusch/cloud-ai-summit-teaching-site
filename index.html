@@ -199,11 +199,23 @@
           <p>Create a pre-call brief from intake answers and flag missing facts.</p>
           <ul><li>Inputs: intake form</li><li>Output: lawyer prep sheet</li><li>Human check: conflict/risk screen</li></ul>
         </article>
-        <article class="idea-card" data-tags="personal injury pi dashboard kpi leads">
+        <article class="idea-card" data-tags="personal injury pi medical records collection records requests providers bills">
           <span class="pill">PI</span>
-          <h3>PI lead triage dashboard</h3>
-          <p>Rank new leads by urgency, injury facts, limitations risk, and missing evidence.</p>
-          <ul><li>Inputs: lead spreadsheet</li><li>Output: dashboard + priority queue</li><li>Human check: intake manager confirms</li></ul>
+          <h3>Medical record collection agent</h3>
+          <p>Track providers, request status, missing bills, authorizations, and follow-up dates so the record chase stops living in someone’s head.</p>
+          <ul><li>Inputs: intake notes, provider list, treatment dates, request log</li><li>Output: records matrix + next follow-ups</li><li>Human check: paralegal confirms provider/status accuracy</li></ul>
+        </article>
+        <article class="idea-card" data-tags="personal injury pi chronology medical timeline treatment records injuries damages">
+          <span class="pill">PI</span>
+          <h3>Medical chronology writer</h3>
+          <p>Convert medical records into a dated treatment timeline with injuries, complaints, diagnoses, gaps, and useful demand-letter facts.</p>
+          <ul><li>Inputs: medical records, bills, incident date, client facts</li><li>Output: chronology table + narrative summary</li><li>Human check: attorney/paralegal checks citations to records</li></ul>
+        </article>
+        <article class="idea-card" data-tags="personal injury pi demand letter medical chronology damages settlement writing">
+          <span class="pill">PI</span>
+          <h3>Demand letter writer agent</h3>
+          <p>Draft a demand package from liability facts, medical chronology, bills, damages notes, and the firm’s demand-writing style guide.</p>
+          <ul><li>Inputs: liability summary, chronology, specials, photos, demand-writing rules</li><li>Output: structured demand draft + exhibit checklist</li><li>Human check: attorney reviews liability, causation, damages, and tone</li></ul>
         </article>
         <article class="idea-card" data-tags="immigration documents organizer checklist">
           <span class="pill">Immigration</span>
@@ -228,6 +240,12 @@
           <h3>Weekly KPI narrator</h3>
           <p>Turn spreadsheet metrics into a short owner briefing: what changed, why it matters, what to do.</p>
           <ul><li>Inputs: CSV or sheet export</li><li>Output: dashboard + narrative</li><li>Human check: data definitions</li></ul>
+        </article>
+        <article class="idea-card" data-tags="all practice areas pipeline phase auditor case audit cron status blockers next actions">
+          <span class="pill">All Practice Areas</span>
+          <h3>Pipeline phase auditor agent</h3>
+          <p>Audit matters by phase, find blockers, compare required milestones to actual status, and generate a concise “weird items + next actions” report.</p>
+          <ul><li>Inputs: case-management export, phase rules, tasks, calendar/deadline data</li><li>Output: blocked matters, missing steps, owner-specific next actions</li><li>Human check: team lead confirms recommendations before changes are made</li></ul>
         </article>
         <article class="idea-card" data-tags="reception intake phone script">
           <span class="pill">Intake</span>
@@ -316,6 +334,59 @@ Rules:
 
 Facts:
 [PASTE FACTS]</code></pre>
+        </article>
+
+        <article class="prompt-card">
+          <div class="prompt-head"><h3>PI demand package builder</h3><button class="copy" data-copy="demandBuilder">Copy</button></div>
+          <pre id="demandBuilder"><code>You are helping draft a personal-injury demand package from source materials.
+
+Use only the facts provided. Do not invent treatment, diagnoses, causation, bills, policy limits, or permanency.
+
+Inputs:
+- Liability summary
+- Medical chronology
+- Medical bills/specials
+- Client impact notes
+- Photos/exhibits
+- Firm demand-writing style rules
+
+Return:
+1. Missing information checklist.
+2. Medical chronology issues that need human review.
+3. Demand letter outline.
+4. Draft demand letter.
+5. Exhibit checklist.
+6. Risk notes: weak causation, treatment gaps, pre-existing conditions, unsupported damages.
+
+Write persuasively, but keep every factual claim tied to the supplied materials.</code></pre>
+        </article>
+
+        <article class="prompt-card">
+          <div class="prompt-head"><h3>Pipeline phase auditor</h3><button class="copy" data-copy="pipelineAuditor">Copy</button></div>
+          <pre id="pipelineAuditor"><code>You are auditing active matters by pipeline phase.
+
+Use the phase rules and matter data below. Do not change records or invent facts.
+
+For each matter, identify:
+1. Current phase.
+2. Required milestones for that phase.
+3. Completed milestones.
+4. Missing or stale items.
+5. Blockers, including missing client/staff/court/third-party actions.
+6. Deadline or calendar risk.
+7. Recommended next action and owner.
+
+Output only:
+- Matters needing attention.
+- Weird items.
+- Clear next actions.
+- Questions a human must answer.
+
+Phase rules:
+[PASTE RULES]
+
+Matter data:
+[PASTE EXPORT]</code></pre>
         </article>
 
         <article class="prompt-card">

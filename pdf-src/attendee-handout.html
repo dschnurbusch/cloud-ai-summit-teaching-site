@@ -21,9 +21,12 @@
 <div class="card"><h3>Probate intake checklist</h3><p>Turn intake notes into missing documents, likely next steps, and client questions.</p></div>
 <div class="card"><h3>Client update email</h3><p>Summarize matter status into a plain-English update with next actions.</p></div>
 <div class="card"><h3>Consultation prep brief</h3><p>Create a pre-call brief from intake answers and flag missing facts.</p></div>
-<div class="card"><h3>Lead triage dashboard</h3><p>Rank leads by urgency, fit, missing facts, and next action.</p></div>
+<div class="card"><h3>Medical record collection agent</h3><p>Track providers, record requests, missing bills, authorizations, and follow-up dates.</p></div>
+<div class="card"><h3>Medical chronology writer</h3><p>Convert records into a dated treatment timeline with injuries, diagnoses, gaps, and damages facts.</p></div>
+<div class="card"><h3>Demand letter writer agent</h3><p>Use liability facts, medical chronology, bills, and writing rules to draft a demand package.</p></div>
 <div class="card"><h3>Document organizer</h3><p>Convert a folder inventory into categories and missing-item requests.</p></div>
 <div class="card"><h3>Weekly KPI narrator</h3><p>Turn metrics into a short briefing: what changed, why it matters, and what to do.</p></div>
+<div class="card"><h3>Pipeline phase auditor agent</h3><p>Audit matters by phase, find blockers, and report weird items plus next actions.</p></div>
 </div>
 
 <h2>Prompts</h2>
@@ -40,6 +43,22 @@ Prefer boring, high-frequency work over impressive demos.</div>
 [TASK]
 
 Include mission, inputs, tools it may use, tools it may not use, output format, quality checklist, escalation rules, human review step, and test cases.</div>
+
+<h3>PI demand package builder</h3><div class="prompt">You are helping draft a personal-injury demand package from source materials.
+
+Use only the facts provided. Do not invent treatment, diagnoses, causation, bills, policy limits, or permanency.
+
+Inputs: liability summary, medical chronology, medical bills/specials, client impact notes, photos/exhibits, and firm demand-writing style rules.
+
+Return: missing information checklist, chronology issues needing human review, demand outline, draft demand letter, exhibit checklist, and risk notes.</div>
+
+<h3>Pipeline phase auditor</h3><div class="prompt">You are auditing active matters by pipeline phase.
+
+Use phase rules and matter data. Do not change records or invent facts.
+
+For each matter, identify current phase, required milestones, completed milestones, missing/stale items, blockers, deadline/calendar risk, recommended next action, and owner.
+
+Output only: matters needing attention, weird items, clear next actions, and questions a human must answer.</div>
 
 <h2>Red flags / green flags</h2>
 <div class="grid">
